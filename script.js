@@ -20,7 +20,6 @@ let pets = [
   }
 ];
 
-// Solo estos 3 elementos
 const loginBtn = document.getElementById('loginBtn');
 const addDefinitionBtn = document.getElementById('addDefinitionBtn');
 const petsContainer = document.getElementById('petsContainer');
@@ -28,11 +27,9 @@ const petsContainer = document.getElementById('petsContainer');
 function init() {
   renderPets();
 
-  // Manteniendo onclick
   loginBtn.onclick = toggleLogin;
   addDefinitionBtn.onclick = handleAddDefinition;
 
-  // Para que el onclick inline funcione
   window.handleLike = handleLike;
 }
 
@@ -66,8 +63,7 @@ function toggleLogin() {
 }
 
 function handleAddDefinition() {
-  // Solo ocultar el botón (sin exigir login)
-  addDefinitionBtn.classList.add('hidden'); // asegúrate de que .hidden { display:none; }
+  addDefinitionBtn.classList.add('hidden');
 }
 
 function handleLike(petId) {
@@ -80,7 +76,6 @@ function handleLike(petId) {
   } else {
     pet.likes++;
     pet.liked = true;
-    // Alerta nativa como en la consigna
     alert(`${pet.name} was liked`);
   }
 
