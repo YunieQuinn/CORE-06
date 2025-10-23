@@ -7,7 +7,6 @@ let pets = [
     plural: 'Gatos Atigrados',
     description: 'Un gato con un pelaje distintivo que presenta rayas, puntos o patrones en remolino, usualmente con una marca en forma de "M" en su frente',
     likes: 0,
-    liked: false
   },
   {
     id: 2,
@@ -16,7 +15,6 @@ let pets = [
     plural: 'Golden Retrievers',
     description: 'Una raza de perro amistosa, inteligente y devota, conocida por su pelaje dorado y su habilidad para recuperar objetos sin dañarlos',
     likes: 0,
-    liked: false
   }
 ];
 
@@ -46,7 +44,6 @@ function renderPets() {
       <div class="info">Plural: ${pet.plural}</div>
       <div class="description">${pet.description}</div>
       <button
-        class="like-btn ${pet.liked ? 'liked' : ''}"
         onclick="handleLike(${pet.id})"
       >
         ${pet.likes} me gusta
@@ -70,14 +67,8 @@ function handleLike(petId) {
   const pet = pets.find(p => p.id === petId);
   if (!pet) return;
 
-  if (pet.liked) {
-    pet.likes--;
-    pet.liked = false;
-  } else {
-    pet.likes++;
-    pet.liked = true;
-    alert(`${pet.name} was liked`);
-  }
+  pet.likes++;     
+  alert(`${pet.name} was liked`);
 
   renderPets();
 }

@@ -110,11 +110,6 @@ main {
     background-color: #f0f0f0;
 }
 
-.pet-card button.liked {
-    background-color: #ffe0e0;
-    border-color: #ff9999;
-}
-
 .sidebar {
     width: 300px;
 }
