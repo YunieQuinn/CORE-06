@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petlopedia</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>Petlopedia</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar mascotas">
+        </div>
+        <button id="loginBtn">Iniciar sesión</button>
+    </header>
+
+    <main>
+        
+
+        <div class="content-wrapper">
+            <div id="petsContainer" class="pets-container">
+            </div>
+
+            <aside class="sidebar">
+                <div class="definition-box">
+                    <p>Petlopedia está definida por TI</p>
+                    <button id="addDefinitionBtn">Agregar Definición</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="alertModal" class="modal">
+        <div class="modal-content">
+            <p id="alertMessage"></p>
+            <button id="alertOkBtn">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
